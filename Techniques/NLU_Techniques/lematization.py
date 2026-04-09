@@ -1,16 +1,9 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Apr  6 17:16:07 2026
-
-@author: Satyabrata Sahoo
-"""
-
-
-
 
 import nltk
 
 from nltk.stem import PorterStemmer
+
+from nltk.stem import WordNetLemmatizer
 
 from nltk.corpus import stopwords
 

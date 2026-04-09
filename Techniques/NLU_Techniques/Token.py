@@ -1,17 +1,6 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Apr  6 17:26:44 2026
-
-@author: Satyabrata Sahoo
-"""
 
 import nltk
 
-from nltk.stem import PorterStemmer
-
-from nltk.stem import WordNetLemmatizer
-
-from nltk.corpus import stopwords
 
 paragraph = '''AI, machine learning and deep learning are common terms in enterprise
                 IT and sometimes used interchangeably, especially by companies in their marketing materials.
@@ -25,21 +14,9 @@ paragraph = '''AI, machine learning and deep learning are common terms in enterp
                 learning, is based on our understanding of how the brain is structured. Deep learning's
                 use of artificial neural networks structure is the underpinning of recent advances in AI,
                 including self-driving cars and ChatGPT.'''
-               
+                
+# Tokenizing sentence
 sentences = nltk.sent_tokenize(paragraph)
-stemmer = PorterStemmer()
 
-#import stopwords
-# I want to remove all the stopwords from my senterences
-# if you check the stopwords.words('english') you get a list of word which is not at all value to the paragraph
-# you do get stopwords in many language.
-# after removing the stopwords i am going to stem the words by using portstemmer
 
-# using for loop for all of sentences & using word_tokenize will convert all sentences to words
-# basically i am writhing for word in words and i am taking from unique word from stopword.english
-# Stemming
-
-for i in range(len(sentences)):
-    words = nltk.word_tokenize(sentences[i])
-    words = [stemmer.stem(word) for word in words if word not in set(stopwords.words('english'))]
-    sentences[i] = ' '.join(words)
+word = nltk.word_tokenize(paragraph)
